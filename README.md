@@ -1,3 +1,5 @@
 # Trabalho_Pi
 Trabalho de PI
-ughauioghaigiuaguaiugahgio
+gabriel
+alexandre
+icaro
