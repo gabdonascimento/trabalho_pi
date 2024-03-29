@@ -7,7 +7,7 @@
     <title>Corrida de Engenharia</title>
 </head>
 <body>
-    <div class ="conteiner">
+    <div class = "conteiner">
         <section class="header">
             <h2>
                 Cadastrar Equipe
@@ -22,39 +22,35 @@
                 id="username"
                 placeholder="Equipe"
                 />
-            <a>Aqui vai a mensagem de erro</a>
             </div>
 
             <div class="form-content">
-                <label for="email">E-mail</label>
+                <label for="car_name">Identificação do Carrinho</label>
                 <input
-                type="email"
-                id="email"
-                placeholder="E-mail"
+                type="text"
+                id="text"
+                placeholder="Identificação Carrinho"
                 />
-            <a>Aqui vai a mensagem de erro</a>
             </div>
 
             <div class="form-content">
-                <label for="password">Senha</label>
-                <input
-                type="password"
-                id="password"
-                placeholder="Senha"
-                />
-            <a>Aqui vai a mensagem de erro</a>
-            </div>
+                <label for="nome_aluno">Nome do Aluno (a)</label>
+                <div id="students_container">
+                    <div class="students_inputs_container col">
+                        <div class="row">
+                            <input
+                                type="text"
+                                id="text"
+                                placeholder="Nome do Aluno (a)"
+                            />
+                            <input type="text" class="input-value" placeholder="RA do Aluno (a)">
+                        </div>
+                    </div>
 
-            <div class="form-content">
-                <label for="password">Confirme sua senha</label>
-                <input
-                type="password"
-                id="password-confirmation"
-                placeholder="Confirme sua senha"
-                />
-            <a>Aqui vai a mensagem de erro</a>
-            </div>
-
+                    <button type="button" id="addRowBtn">+</button>
+                </div>
+                
+               
             <button type="submit">
                 Cadastrar Equipe
             </button>
