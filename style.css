@@ -14,6 +14,16 @@ body{
     align-items: center;
 }
 
+.row {
+    display: flex;
+    /* margin-bottom: 10px; */
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
 .conteiner{
     background-color: #fafafa;
     border-radius: 14px;
@@ -36,6 +46,12 @@ body{
 }
 
 .form-content{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.container{
     margin-bottom: 8px;
     padding-bottom: 18px;
     position: relative;
@@ -79,4 +95,21 @@ body{
 
 .form-content.error a{
     color: red;
+}
+
+.input-value {
+    width: 200px;
+}
+
+.students_inputs_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.students_inputs_container .row {
+    width: 100%;
+}
+
+.students_inputs_container .row input {
+    width: 49%;
 }
