@@ -113,3 +113,32 @@ body{
 .students_inputs_container .row input {
     width: 49%;
 }
+
+.row{
+    display: flex;
+    align-items: center;
+}
+
+.deleteBtn{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addBtn{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover, .addBtn:hover{
+    opacity: 0.8;
+}
