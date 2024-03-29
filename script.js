@@ -1,19 +1,21 @@
-function mountInput(placeholder, type = "text", classes = "input-value") {
-    var newInput = document.createElement("input");
-    newInput.classList.add(classes)
-    newInput.setAttribute("type", type)  
-    newInput.setAttribute("placeholder", placeholder)   
-    return newInput;
-}
-
+// Function to add a new row to the form
 function addRow() {
-    var container = document.querySelector(".students_inputs_container");
+    var studentsContainer = document.getElementById("students_container");
     var newRow = document.createElement("div");
     newRow.classList.add("row");
-    newRow.appendChild(mountInput('Nome do Aluno(a)'))
-    newRow.appendChild(mountInput('RA do Aluno(a)'))
-    container.appendChild(newRow);
+    newRow.innerHTML = `
+        <input type="text" id="text" placeholder="Nome do Aluno (a)">
+        <input type="text" class="input-value" placeholder="RA do Aluno (a)">
+        <button type="button" class="deleteBtn" onclick="removeRow(this)">Remover Aluno</button>
+    `;
+    studentsContainer.appendChild(newRow);
 }
 
-// Event listener for the button
+// Function to remove a row from the form
+function removeRow(button) {
+    var row = button.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+// Event listener for adding a row
 document.getElementById("addRowBtn").addEventListener("click", addRow);
