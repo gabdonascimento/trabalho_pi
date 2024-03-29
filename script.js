@@ -1,19 +1,19 @@
-const form = document.getElementById("form");
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const passwordConfirmation = document.getElementById("password-confirmation");
-
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    checkInputUsername();
-})
-
-function checkInputUsername(){
-    const usernameValue = username.ariaValueMax;
-
-    if(usernameValue === ""){
-        //mostrar a mensagem de erro...
-    }
+function mountInput(placeholder, type = "text", classes = "input-value") {
+    var newInput = document.createElement("input");
+    newInput.classList.add(classes)
+    newInput.setAttribute("type", type)  
+    newInput.setAttribute("placeholder", placeholder)   
+    return newInput;
 }
+
+function addRow() {
+    var container = document.querySelector(".students_inputs_container");
+    var newRow = document.createElement("div");
+    newRow.classList.add("row");
+    newRow.appendChild(mountInput('Nome do Aluno(a)'))
+    newRow.appendChild(mountInput('RA do Aluno(a)'))
+    container.appendChild(newRow);
+}
+
+// Event listener for the button
+document.getElementById("addRowBtn").addEventListener("click", addRow);
