@@ -1,5 +1,7 @@
-# Trabalho_Pi
-Trabalho de PI
-gabriel
-alexandre
-icaro
+# Resumo
+
+Trabalho interdisciplinar...
+
+# Referências: 
+
+[Padrão de nomeação de classes](https://getbem.com/naming/)
