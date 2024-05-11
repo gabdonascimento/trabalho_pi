@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Corrida de Engenharia</title>
+</head>
+<body>
+    <div class = "conteiner">
+        <section class="header">
+            <h2>
+                Cadastrar Equipe
+            </h2>
+        </section>
+
+        <form id="form" class="form">
+            <div class="form-content">
+                <label for="username">Nome da Equipe</label>
+                <input
+                type="text"
+                id="username"
+                placeholder="Equipe"
+                />
+            </div>
+
+            <div class="form-content">
+                <label for="car_name">Identificação do Carrinho</label>
+                <input
+                type="text"
+                id="text"
+                placeholder="Identificação Carrinho"
+                />
+            </div>
+
+            <div class="form-content">
+                <label for="nome_aluno">Nome do Aluno (a)</label>
+                <div id="students_container">
+                    <div class="students_inputs_container col">
+                        <div class="row">
+                            <input
+                                type="text"
+                                id="text"
+                                placeholder="Nome do Aluno (a)"
+                            />
+                            <input type="text" class="input-value" placeholder="RA do Aluno (a)">
+                            <button type="button" class="deleteBtn" onclick="removeRow(this)">Remover Aluno</button><br>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="addRowBtn">Adicionar Aluno</button>
+            </div>
+
+            <button type="submit">
+                Cadastrar Equipe
+            </button>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
