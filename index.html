@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar equipe</title>
+    <title>Página inicial</title>
+
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/pages/index.css">
+    <link rel="stylesheet" href="./src/css/components/navbar.css">
+    <link rel="stylesheet" href="./src/css/components/text.css">
+    <link rel="stylesheet" href="./src/css/components/button.css">
 </head>
 <body>
     <navbar class="navbar">
         <ul class="navbar__list">
             <li class="navbar__list-item">
-                <a href="create_team.html">Cadastrar Equipe</a>
+                <a href="./src/pages/create_team.html">Cadastrar Equipe</a>
+            </li>
+            <li class="navbar__list-item">
+                <a href="./src/pages/create_test.html">Cadastrar Prova</a>
             </li>
             <li  class="navbar__list-item">
-                <a href="create_test.html">Cadastrar Prova</a>
-            </li>
-            <li  class="navbar__list-item">
-                <a href="create_test.html">Cadastrar Aluno</a>
+                <a href="./src/pages/create_student.html">Cadastrar Aluno</a>
             </li>
         </ul>
     </navbar>
+
+    <div class="welcome__card">
+        <h1 class="title">Corrida de Engenharia</h1>
+        <p class="paragraph">Seja bem-vindo ao sistema de gerenciamento da corrida de engenharia, Professora! 🎉
+        <p class="paragraph">Use os links da <strong class="strong">navbar</strong> para nevegar através do sistema ou clique no botão abaixo para começar criando uma equipe.</p>
+        <a href="./src/pages/create_team.html" class="btn">
+            Cadastrar Equipe
+        </a>
+    </div>
 </body>
 </html>
