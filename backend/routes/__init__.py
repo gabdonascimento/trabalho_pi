@@ -2,22 +2,26 @@ from fastapi import APIRouter, Depends
 
 
 squads_router = APIRouter(
-    prefix="/squads",
-    tags=["squads"],
+    prefix="/equipes",
+    tags=["equipes"],
     # dependencies=[Depends(get_db)],
     responses={404: {"description": "Not found"}},
 )
 
 students_router = APIRouter(
-    prefix="/students",
-    tags=["students"],
+    prefix="/estudantes",
+    tags=["estudantes"],
     # dependencies=[Depends(get_db)],
     responses={404: {"description": "Not found"}},
 )
 
 tests_router = APIRouter(
-    prefix="/tests",
-    tags=["tests"],
+    prefix="/provas",
+    tags=["provas"],
     # dependencies=[Depends(get_db)],
     responses={404: {"description": "Not found"}},
 )
+
+from routes.squads import *
+from routes.students import *
+from routes.tests import *

@@ -1,4 +1,4 @@
-from schemas import StudentCreate
+from database.schemas import StudentCreate
 from dependencies import connection
 
 

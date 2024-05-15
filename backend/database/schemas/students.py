@@ -1,6 +1,5 @@
-from typing import Optional
 from pydantic import BaseModel
-from schemas import OptionalModel
+from database.schemas import OptionalModel
 
 
 class Student(BaseModel):
@@ -9,12 +8,12 @@ class Student(BaseModel):
 
     Attributes:
         id (int): The unique identifier of the student.
-        name (str): The name of the student.
+        nome (str): The name of the student.
         RA (int): The registration number of the student.
     """
 
     id: int
-    name: str
+    nome: str
     RA: int
 
 
@@ -27,7 +26,7 @@ class StudentCreate(BaseModel):
         RA (int): The RA (Registration Number) of the student.
     """
 
-    name: str
+    nome: str
     RA: int
 
 

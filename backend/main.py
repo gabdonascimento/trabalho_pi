@@ -1,15 +1,22 @@
-import json
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import os
+import uvicorn
+from routes import squads_router, students_router, tests_router
 
-# Create an instance of FastAPI
-app = FastAPI()
+# from routes.squads import squads_router
 
+app = FastAPI(
+    title="Documentação da API Engineers Race",
+    version="1.0.0",
+)
 origins = [
     "http://localhost",
     "http://localhost:5500",
 ]
+
+app.include_router(squads_router)
+app.include_router(students_router)
+app.include_router(tests_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,15 +27,6 @@ app.add_middleware(
 )
 
 
-@app.post("/criar_time")
-async def read_root(request: Request):
-    request_body = await request.body()
-    json_data = json.loads(request_body.decode("utf-8"))
-    print("json_data: ", json_data)
-    # ip_list.append(request.client.host)
-    #  print("ip_list: ", ip_list)
-    return {"message": "Hello, Alexandre!"}
-
-
 if __name__ == "__main__":
-    os.system("uvicorn main:app --reload")
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    # os.system("uvicorn main:app --reload")

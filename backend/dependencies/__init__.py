@@ -1,1 +1,1 @@
-from db import *
+from dependencies.db import *
